@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="blogger">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv+"X-UA-Compatible" content="IE=EDGE">
+        <meta name="viewport" content="width = device-width, initial-scale = 1"> 
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+       
+        <title>Blogger</title>
+
+    </head>
+
+    <body ng-view>
+
+        <div class="page-header">.
+        <div style="background:RGBA(255, 255, 255, .9) !important" class="jumbotron">
+            <h1 id="header">SCANDAL PRESS</h1>
+
+            </div>
+            </div>
+
+
+    <div class="container" id="post-list" ng-controller="PostController">
+    <a ng-href="/#!/posts/{{ p.id }}">
+        <div class="post">
+            <h3 id="title">{{ p.title }}</h3>
+            <h4 id="content">{{ p.content }}</h4>
+            <p id="date">{{ p.createdAt | date: 'short' }}</p>
+        </div>
+    </a>
+    </div>
+    </body>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-resource.js"></script>
+
+        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="controllers.js"></script>
+        <script type="text/javascript" src="factories.js"></script>
+    
